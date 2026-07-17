@@ -10,6 +10,4 @@ class Solution:
                 l+=1
             char.add(s[r])
             res=max(res,r-l+1)
-        return res 
-
-        
+        return res
