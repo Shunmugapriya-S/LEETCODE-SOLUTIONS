@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select  EMP.employee_id  from Employees EMP  left join Employees MAN on EMP.manager_id =MAN.employee_id where EMP.salary<30000 AND EMP.manager_id is not null and MAN.employee_id is null order by EMP.employee_id;
