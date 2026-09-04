@@ -6,8 +6,8 @@ class Solution:
             if currsum<0:
                 currsum=0
             currsum+=n
-            maxsum=max(maxsum,currsum)
-        return maxsum 
+            maxsum=max(currsum,maxsum)
+        return maxsum
 
 
         
