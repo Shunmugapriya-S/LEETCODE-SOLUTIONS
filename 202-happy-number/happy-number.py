@@ -7,11 +7,11 @@ class Solution:
             if n==1:
                 return True
         return False
-    def sumofsquares(self,n:int)->int:
-        output=0
+    def sumofsquares(self,n:int):
+        out=0
         while n:
             digit=n%10
             digit=digit**2
-            output+=digit
-            n=n//10
-        return output
+            out+=digit
+            n//=10
+        return out 
