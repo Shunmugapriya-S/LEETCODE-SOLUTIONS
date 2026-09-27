@@ -1,16 +1,17 @@
 class Solution:
     def frequencySort(self, s: str) -> str:
-        count=Counter(s)
-        bucket=defaultdict(list)
-        for char,cnt in count.items():
-            bucket[cnt].append(char)
-        res=[]
-        for i in range(len(s),0,-1):
-            for c in bucket[i]:
-                res.append(c*i)
-        return "".join(res)
-
-
+        freq={}
+        for ch in s:
+            freq[ch]=freq.get(ch,0)+1
+        heap=[]
+        for ch,count in freq.items():
+            heapq.heappush(heap,(-count,ch))
+        result=[]
+        while heap:
+            count,ch=heapq.heappop(heap)
+            result.append(ch*(-count))
+        return "".join(result)
+    
 
 
         
