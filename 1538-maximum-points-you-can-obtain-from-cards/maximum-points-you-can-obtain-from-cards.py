@@ -7,5 +7,5 @@ class Solution:
         for i in range(1,k+1):
             left-=cardPoints[k-i]
             right+=cardPoints[n-i]
-            maxsum=max(maxsum,left+right)
-        return maxsum 
+            maxsum=max(maxsum,right+left)
+        return maxsum
